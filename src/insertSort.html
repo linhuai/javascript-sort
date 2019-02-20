@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>insert Sort</title>
+</head>
+
+<body>
+  <script>
+    function insertSort(arr) {
+      for (let i = 1, len = arr.length; i < len; i++) {
+        let key = arr[i]
+        let j = i - 1
+        while (arr[j] > key) {
+          arr[j + 1] = arr[j]
+          j--
+        }
+        arr[j + 1] = key
+        console.log(i, arr)
+      }
+      return arr
+    }
+    let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    console.log('before', arr)
+    let result = insertSort(arr)
+    console.log('after', result)
+  </script>
+</body>
+
+</html>
